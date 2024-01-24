@@ -23,14 +23,10 @@ public class MainApp {
 
       List<User> users = userService.listUsers();
       for (User user : users) {
-         System.out.println("Id = "+user.getId());
-         System.out.println("First Name = "+user.getFirstName());
-         System.out.println("Last Name = "+user.getLastName());
-         System.out.println("Email = "+user.getEmail());
-         System.out.println();
+         System.out.println(user.toString());
       }
 
-      System.out.println("Поиск по автомобилю: \n" + userService.findByModelAndSeries("Supra", 34));
+      System.out.println("Поиск по автомобилю: \n" + userService.findByModelAndSeries("Moscvich", 34));
       context.close();
    }
 }
